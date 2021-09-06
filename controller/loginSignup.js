@@ -26,7 +26,7 @@ exports.signup = (req, res) => {
             var reg_token = jwt.sign({ email, password }, "Key", {
                 expiresIn: "2h"
             });
-            res.cookie("jwt", reg_token).json({
+            res.cookie("jwt", reg_token).json({ 
                 message: "user found",
                 reg_token: reg_token
             });
@@ -80,7 +80,7 @@ exports.createPost = (req, res) => {
                 res.send("not created");
             };
         })
-        .catch((err) => {
+        .catch((err) => { 
             res.send(err)
         });
 };
@@ -100,7 +100,7 @@ exports.LikeDislike = (req, res) => {
     knexcon.select("*")
         .from('post').where({ imange: req.body.imange })
         .then((First_result) => {
-            User_like = req.body.like
+            User_like = req.body.like 
             user_dislike = req.body.dislike
             if (First_result.length != 0) {
                 if (User_like == "like") {

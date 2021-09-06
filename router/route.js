@@ -12,4 +12,4 @@ route.get("/seeLikeDislike",controll.seeLikeDislike);
 route.post("/post",auth,controll.post);
 
 
-module.exports = route;
+module.exports = route; 

@@ -1,7 +1,7 @@
 const express = require("express");
-const controll = require("../blog-app-express-mysql/controller/loginSignup")
-const knexFile = require("../blog-app-express-mysql/knexfile");
-const route = require("../blog-app-express-mysql/router/route")
+const controll = require("../Express-Mysql-BlogApp/controller/loginSignup")
+const knexFile = require("../Express-Mysql-BlogApp/knexfile");
+const route = require("../Express-Mysql-BlogApp/router/route")
 
 var app = express();
 app.use(express.json());
